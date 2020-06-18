@@ -11,7 +11,11 @@ body{
   padding: 4em;
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(25,25,25);  
+  background-image: url("../Images/BlueMountainM.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(25px);
 }
 .line-1{
     position: relative;
@@ -19,7 +23,7 @@ body{
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 300%;
+    font-size: calc(14px + (42 - 14) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
