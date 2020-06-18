@@ -2,8 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 html{
-  min-height: 100%;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 body{
@@ -12,9 +12,14 @@ body{
   font-family: 'Anonymous Pro', monospace;  
 }
 
+#container {
+  width: 100%;
+  height: 200%;
+}
+
 #div1 {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 #div1-fg {
@@ -24,7 +29,7 @@ body{
 
 #bg-img-css{
   display: block;
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   
@@ -102,4 +107,101 @@ body{
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-1 {
+  -webkit-animation: arrow-movement 2s ease-in-out infinite;
+          animation: arrow-movement 2s ease-in-out infinite;
+          animation-delay: 4s;
+}
+
+.arrow-2 {
+  -webkit-animation: arrow-movement 2s 1s ease-in-out infinite;
+          animation: arrow-movement 2s 1s ease-in-out infinite;
+          animation-delay: 5s;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.arrow:before {
+  -webkit-transform: rotate(45deg) translateX(-23%);
+          transform: rotate(45deg) translateX(-23%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.arrow:after {
+  -webkit-transform: rotate(-45deg) translateX(23%);
+          transform: rotate(-45deg) translateX(23%);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+@-webkit-keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 85%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 85%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#subtitle {
+  position: relative;
+  text-align: center;
+  top: 69%;
+
+  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+
+  animation: fade-in-sub ease 10s;
+}
+
+@keyframes fade-in-sub{
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
