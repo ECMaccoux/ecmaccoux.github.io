@@ -11,22 +11,32 @@
         <link rel="icon" type="image/png" href="Images/mountainm_9gn_icon.ico" />
     </head>
     <body style="background-color: #2C2C41;">
-        <!-- <p class="line-1 anim-typewriter">Hello, my name is <strong>Eric Maccoux</strong>.</p> -->
 
         <div id="container">
             <div id="div1">
-                <div id="div1-bg">
-                    <!-- <img id="bg-img" src="./Images/BlueMountainM.png" style="display:none;" /> -->
-                    <img id="bg-img-css" src="./Images/BlueMountainM.png" />
-                </div>
+                <img id="bg-img-css" src="./Images/BlueMountainM.png" />
+
                 <div id="div1-fg">
                     <p class="line-1 anim-typewriter">Hello, my name is <strong>Eric Maccoux</strong>.</p>
 
-                    <p id="subtitle">Full-stack software developer, technical writer, IT support specialist, and so much more</p>
+                    <p id="subtitle">Full-stack software developer, technical writer, IT specialist, and so much more</p>
                     
-                    <div class="arrow arrow-1"></div>
-                    <div class="arrow arrow-2"></div>
+                    <!--<a href="#div2">
+                        <div id="div1-fg-down">
+                            <div class="arrow arrow-1"></div>
+                            <div class="arrow arrow-2"></div>
+                        </div>
+                    </a>-->
+
+                    <div id="div1-fg-down">
+                        <a data-scroll href="#div2">
+                            <div class="arrow"></div>
+                        </a>
+                    </div>
                 </div>
+            </div>
+
+            <div id="div2">
                 
             </div>
         </div>
