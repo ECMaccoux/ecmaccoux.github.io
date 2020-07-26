@@ -11,7 +11,7 @@ body {
     /*font-family: monospace;*/  
     display: inline-block;
     position: relative;
-    width: 24em;
+    width: 30em;
     margin: 0;
     border-right: 2px solid transparent;
     font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
