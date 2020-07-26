@@ -11,7 +11,7 @@ body {
     /*font-family: monospace;*/  
     display: inline-block;
     position: relative;
-    width: 30em;
+    width: 24em;
     margin: 0;
     border-right: 2px solid transparent;
     font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
@@ -31,7 +31,7 @@ body {
     width: 0;
   }
   100% {
-    width: 5.75em;
+    width: 6em;
   }
 }
 @keyframes fade-in-typewriter{
