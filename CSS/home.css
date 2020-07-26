@@ -46,3 +46,10 @@ body {
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+}
